@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <base href="http://localhost/">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso Docker</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div id="app">
+        <header class="header">
+            <p class="header__title">Curso de Docker</p>
+            <p class="header__subtitle">Cadastro Simples</p>
+        </header>
+        <div class="block"></div>
+        <main class="content">
+            <section class="container">
+                <div class="card mb-2">
+                    <div class="card__header">
+                        <p>Cadastro</p>
+                    </div>
+                    <div class="card__body">
+                        <div class="form">
+                            <input type="hidden" name="id">
+                            <div class="input-group">
+                                <label for="">Titulo</label>
+                                <input type="text" name="title" class="input-control">
+                            </div>
+                            <div class="input-group">
+                                <label for="">Descrição</label>
+                                <textarea name="description" cols="30" rows="10" class="input-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card__footer">
+                        <div class="row">
+                            <div class="col-6">
+                                <button class="btn btn-danger w5">Limpar</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-success w10" save>Cadastrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-2">
+                    <div class="card__header">
+                        Lista de Tarefas
+                    </div>
+                    <div class="card__body">
+                        <table id="tasks">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Titulo</th>
+                                    <th>Descrição</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tasksRows">
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="card__footer"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p class="footer__title">Curso de Docker</p>
+        </footer>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="./tasks.js"></script>
+</body>
+
+</html>
